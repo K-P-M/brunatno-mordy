@@ -13,3 +13,4 @@ class DatasetConfig:
     TO_WHISPE_R = "../data/movies_to_whisper.jsonl"
     ALL_SCRAPED_MOVIES = "../data/all_movies.jsonl"
     NON_GENERATED = "../data/bomba_captions.jsonl"
+    TRANSCRIPTION = "../data/transcriptions.jsonl"
