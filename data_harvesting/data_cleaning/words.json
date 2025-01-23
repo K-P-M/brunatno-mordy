@@ -5,11 +5,11 @@
     },
     {
         "word": "roz***ała",
-        "replace": ""
+        "replace": "rozpierdala"
     },
     {
         "word": "spie***am",
-        "replace": ""
+        "replace": "spierdalam"
     },
     {
         "word": "nad***ała",
@@ -17,43 +17,43 @@
     },
     {
         "word": "k*****a",
-        "replace": ""
+        "replace": "kurwa"
     },
     {
         "word": "z***em",
-        "replace": ""
+        "replace": "zjebałem"
     },
     {
         "word": "p***ę",
-        "replace": ""
+        "replace": "pierdolę"
     },
     {
         "word": "j**any",
-        "replace": ""
+        "replace": "jebany"
     },
     {
         "word": "nap****lamy",
-        "replace": ""
+        "replace": "napierdalamy"
     },
     {
         "word": "prz**any",
-        "replace": ""
+        "replace": "przyjebany"
     },
     {
         "word": "wy***ałaj",
-        "replace": ""
+        "replace": "wypierdalaj"
     },
     {
         "word": "pierd**my",
-        "replace": ""
+        "replace": "pierdolimy"
     },
     {
         "word": "k***ać",
-        "replace": ""
+        "replace": "kurwa mać"
     },
     {
         "word": "ch**owej",
-        "replace": ""
+        "replace": "chujowej"
     },
     {
         "word": "c*****a",
@@ -113,35 +113,35 @@
     },
     {
         "word": "kur**x",
-        "replace": ""
+        "replace": "kurwinox"
     },
     {
         "word": "k***i",
-        "replace": ""
+        "replace": "kurwie"
     },
     {
         "word": "po***ało",
-        "replace": ""
+        "replace": "pojebało"
     },
     {
         "word": "ch**ie",
-        "replace": ""
+        "replace": "chuje"
     },
     {
         "word": "do**nolimy",
-        "replace": ""
+        "replace": "dopierdolimy"
     },
     {
         "word": "z***bać",
-        "replace": ""
+        "replace": "zajebać"
     },
     {
         "word": "z*****y",
-        "replace": ""
+        "replace": "zapierdalamy"
     },
     {
         "word": "ch***j",
-        "replace": ""
+        "replace": "chuj"
     },
     {
         "word": "b*****a",
@@ -153,19 +153,19 @@
     },
     {
         "word": "ch**ki",
-        "replace": ""
+        "replace": "chujki"
     },
     {
         "word": "k**sem",
-        "replace": ""
+        "replace": "kutasem"
     },
     {
         "word": "kur**inoks",
-        "replace": ""
+        "replace": "kurwinoks"
     },
     {
         "word": "o**a",
-        "replace": ""
+        "replace": "ochujał"
     },
     {
         "word": "z***alstwo",
@@ -181,43 +181,43 @@
     },
     {
         "word": "ch**e",
-        "replace": ""
+        "replace": "chuje"
     },
     {
         "word": "j**o",
-        "replace": ""
+        "replace": "jebło"
     },
     {
         "word": "p***ie",
-        "replace": ""
+        "replace": "pierdole"
     },
     {
         "word": "ch**ami",
-        "replace": ""
+        "replace": "chujami"
     },
     {
         "word": "op***anie",
-        "replace": ""
+        "replace": "opierdalanie"
     },
     {
         "word": "z******my",
-        "replace": ""
+        "replace": "zapierdalamy"
     },
     {
         "word": "prze****n",
-        "replace": ""
+        "replace": "przejebane"
     },
     {
         "word": "u*****ny",
-        "replace": ""
+        "replace": "ujebany"
     },
     {
         "word": "p**nił",
-        "replace": ""
+        "replace": "pedalił"
     },
     {
         "word": "odp***a",
-        "replace": ""
+        "replace": "odpierdala"
     },
     {
         "word": "k**wa",
@@ -233,15 +233,15 @@
     },
     {
         "word": "u*******a",
-        "replace": ""
+        "replace": "ujebany"
     },
     {
         "word": "z*****olonej",
-        "replace": ""
+        "replace": "zapierdolonej"
     },
     {
         "word": "k**i",
-        "replace": ""
+        "replace": "kurwie"
     },
     {
         "word": "wy***ał",
@@ -301,7 +301,7 @@
     },
     {
         "word": "upier**ić",
-        "replace": ""
+        "replace": "upierdolić"
     },
     {
         "word": "z*****a",
@@ -313,15 +313,15 @@
     },
     {
         "word": "kur**a",
-        "replace": ""
+        "replace": "kurwa"
     },
     {
         "word": "k*****z",
-        "replace": ""
+        "replace": "kurwinoks"
     },
     {
         "word": "sku**a",
-        "replace": ""
+        "replace": "skurwysyna"
     },
     {
         "word": "ch**iłem",
@@ -333,11 +333,11 @@
     },
     {
         "word": "p***ol",
-        "replace": ""
+        "replace": "pierdol"
     },
     {
         "word": "zap**lić",
-        "replace": ""
+        "replace": "zapierdolić"
     },
     {
         "word": "f*****a",
@@ -345,19 +345,19 @@
     },
     {
         "word": "p*****le",
-        "replace": ""
+        "replace": "pedale"
     },
     {
         "word": "ch***a",
-        "replace": ""
+        "replace": "chujowa"
     },
     {
         "word": "wy***ny",
-        "replace": ""
+        "replace": "wychujany"
     },
     {
         "word": "k*****u",
-        "replace": ""
+        "replace": "kurwiu"
     },
     {
         "word": "c***a",
@@ -869,55 +869,55 @@
     },
     {
         "word": "roz***a",
-        "replace": ""
+        "replace": "rozjebana"
     },
     {
         "word": "po***ał",
-        "replace": ""
+        "replace": "poruchał"
     },
     {
         "word": "na**lamy",
-        "replace": ""
+        "replace": "napierdalamy"
     },
     {
         "word": "z***iła",
-        "replace": ""
+        "replace": "zjebała"
     },
     {
         "word": "k***iny",
-        "replace": ""
+        "replace": "kurwiny"
     },
     {
         "word": "pier***i",
-        "replace": ""
+        "replace": "pierdoleni"
     },
     {
         "word": "zb***ł",
-        "replace": ""
+        "replace": "zjebał"
     },
     {
         "word": "k**as",
-        "replace": ""
+        "replace": "kutas"
     },
     {
         "word": "f***iowe",
-        "replace": ""
+        "replace": "fiutkowie"
     },
     {
         "word": "p***li",
-        "replace": ""
+        "replace": "pierdoli"
     },
     {
         "word": "sku*****ów",
-        "replace": ""
+        "replace": "skurwsynów"
     },
     {
         "word": "ch**iu",
-        "replace": ""
+        "replace": "chuju"
     },
     {
         "word": "naj**ny",
-        "replace": ""
+        "replace": "najebany"
     },
     {
         "word": "s***u",
@@ -937,11 +937,11 @@
     },
     {
         "word": "s***ć",
-        "replace": ""
+        "replace": "srać"
     },
     {
         "word": "opier***laki",
-        "replace": ""
+        "replace": "opierdalanki"
     },
     {
         "word": "s***wo",
@@ -957,27 +957,27 @@
     },
     {
         "word": "pier***olić",
-        "replace": ""
+        "replace": "pierdolić"
     },
     {
         "word": "g***u",
-        "replace": ""
+        "replace": "gówno"
     },
     {
         "word": "w******ać",
-        "replace": ""
+        "replace": "wkurwiać"
     },
     {
         "word": "k**iem",
-        "replace": ""
+        "replace": "kurwiem"
     },
     {
         "word": "rozp***ać",
-        "replace": ""
+        "replace": "rozpierdalać"
     },
     {
         "word": "na**dalam",
-        "replace": ""
+        "replace": "nawpierdalam"
     },
     {
         "word": "w*****u",
@@ -1049,7 +1049,7 @@
     },
     {
         "word": "k***y",
-        "replace": ""
+        "replace": "kutasy"
     },
     {
         "word": "pier**acia",
@@ -1057,11 +1057,11 @@
     },
     {
         "word": "w***y",
-        "replace": ""
+        "replace": "wjebał"
     },
     {
         "word": "sk***ów",
-        "replace": ""
+        "replace": "skurwysynów"
     },
     {
         "word": "f**olinic",
