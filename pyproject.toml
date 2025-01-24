@@ -13,6 +13,7 @@ jsonlines = "^4.0.0"
 openai-whisper = "^20240930"
 openai = "^1.60.0"
 nltk = "^3.9.1"
+tqdm = "^4.67.1"
 
 
 [build-system]
