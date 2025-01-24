@@ -5,11 +5,13 @@ from tqdm import tqdm
 
 
 class DeepSeekInputCreator:
-    def __init__(self, api_key: str):
+    def __init__(self, api_key: str, temperature: float = 1.3):
         self.client = OpenAI(
             api_key=api_key,
             base_url="https://api.deepseek.com",
         )
+
+        self.temperature = temperature
 
         self.system_prompt = """
         Stwórz opisy dla podanego tekstu. Opis umieść w polu "user", a niezmieniony tekst w polu "assistant".
@@ -48,7 +50,7 @@ class DeepSeekInputCreator:
             response_format={
                 'type': 'json_object'
             },
-            temperature=1.5,
+            temperature=self.temperature,
         )
 
         return json.loads(response.choices[0].message.content)
