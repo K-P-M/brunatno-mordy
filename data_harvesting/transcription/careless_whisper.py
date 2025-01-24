@@ -59,7 +59,7 @@ class CaptainWhisper:
             time.sleep(1)
             if self.num != i:
                 try:
-                    yt = YouTube(video['url'],use_po_token=True)
+                    yt = YouTube(video['url'],use_po_token=use_po_token)
                     audio_stream = yt.streams.get_audio_only()
                     downloaded_file = audio_stream.download(output_path=self.folder)
                     print(f"Pobrano {video['title']}")

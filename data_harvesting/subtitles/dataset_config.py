@@ -14,3 +14,4 @@ class DatasetConfig:
     ALL_SCRAPED_MOVIES = "../data/all_movies.jsonl"
     NON_GENERATED = "../data/bomba_captions.jsonl"
     TRANSCRIPTION = "../data/transcriptions.jsonl"
+    CAPTIONS = "../data/bomba_captions.jsonl"
