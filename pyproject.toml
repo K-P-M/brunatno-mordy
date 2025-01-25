@@ -6,7 +6,7 @@ authors = ["Maciej Gierczak <maciejgier@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.10,<4.0"
 pytubefix = "^8.12.0"
 huggingface-hub = "^0.27.1"
 jsonlines = "^4.0.0"
