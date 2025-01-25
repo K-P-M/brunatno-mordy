@@ -5,21 +5,23 @@ from tqdm import tqdm
 
 
 class DeepSeekInputCreator:
-    def __init__(self, api_key: str):
+    def __init__(self, api_key: str, temperature: float = 1.3):
         self.client = OpenAI(
             api_key=api_key,
             base_url="https://api.deepseek.com",
         )
 
+        self.temperature = temperature
+
         self.system_prompt = """
-        Stwórz opisy dla podanego tekstu. Opis umieść w polu "user", a niezmieniony tekst w polu "assistant".
-        
+        Sparafrazuj podany tekst w mowie potocznej podmieniając przekleństwa na bardziej kulturalne słowa. Nie dodawaj na koniec komentarza od siebie teskt umieść w polu "user", a niezmieniony tekst w polu "assistant".
+
         EXAMPLE USER INPUT:
         Nazywam się Cezary Baryka, od dwudziestu minut jestem właścicielem tego oto szklanego domu. Powoli zaczynam żałować zakupu. W nocy pizga, w dzień parówa. Zero wentylacji i brak kanalizacji robią swoje.
         
         EXAMPLE JSON OUTPUT:
         {
-            "user": "Opowiedz jak jak to jest mieszkać w szklanym domu",
+            "user": Jestem Cezary Baryka, od jakichś 20 minut mam ten szklany dom. I już trochę żałuję, że go kupiłem. W nocy nieubłagalnie zimno, a w dzień upał nie do wytrzymania. Zero przewiewu i brak kanalizacji",
             "assistant": "Nazywam się Cezary Baryka, od dwudziestu minut jestem właścicielem tego oto szklanego domu. Powoli zaczynam żałować zakupu. W nocy pizga, w dzień parówa. Zero wentylacji i brak kanalizacji robią swoje."
         }
         """
@@ -48,7 +50,7 @@ class DeepSeekInputCreator:
             response_format={
                 'type': 'json_object'
             },
-            temperature=1.5,
+            temperature=self.temperature,
         )
 
         return json.loads(response.choices[0].message.content)
