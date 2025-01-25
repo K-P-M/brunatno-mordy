@@ -43,8 +43,7 @@ def formatting_prompts_func(examples):
 
 train_data =
 
-loaded_data = formatting_prompts_func(train_data)["text"]
-formated_data = map(lambda x : x.replace("|im_end|", "/s"),loaded_data)
+loaded_data = formatting_prompts_func(train_data)
 
 
 
