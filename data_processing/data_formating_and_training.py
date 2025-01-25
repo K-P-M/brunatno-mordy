@@ -7,7 +7,7 @@ dtype = None
 load_in_4bit = True
 
 model, tokenizer = FastLanguageModel.from_pretrained(
-    model_name = "speakleash/Bielik-7B-Instruct-v0.1", # Choose ANY! eg teknium/OpenHermes-2.5-Mistral-7B
+    model_name = "speakleash/Bielik-7B-Instruct-v0.1",
     max_seq_length = max_seq_length,
     dtype = dtype,
     load_in_4bit = load_in_4bit,
@@ -32,9 +32,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
 
 tokenizer = get_chat_template(
     tokenizer,
-    chat_template = "mistral", # Supports zephyr, chatml, mistral, llama, alpaca, vicuna, vicuna_old, unsloth
-    map_eos_token=True,
-
+    chat_template = "mistral",
 )
 
 def formatting_prompts_func(examples):
