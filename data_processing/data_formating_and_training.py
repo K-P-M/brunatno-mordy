@@ -4,6 +4,7 @@ from trl import SFTTrainer
 from transformers import TrainingArguments
 from unsloth import is_bfloat16_supported
 from datasets import Dataset
+from data_processing.prepare_dataset import load_and_format_training_data
 
 import torch
 
@@ -12,7 +13,7 @@ model, tokenizer = FastLanguageModel.from_pretrained(
     model_name = "speakleash/Bielik-7B-Instruct-v0.1",
     max_seq_length = 2048,
     dtype = None,
-    load_in_4bit = True,
+    load_in_4bit = False,
 )
 # format danych
 # chat =[
@@ -43,7 +44,7 @@ def formatting_prompts_func(examples):
     return { "text" : texts }
 
 # wczytanie danych
-train_data =
+train_data = load_and_format_training_data("train_datasets/descriptions.jsonl")
 
 data_in_dict = {"conversation": train_data}
 

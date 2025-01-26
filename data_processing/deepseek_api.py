@@ -14,7 +14,7 @@ class DeepSeekInputCreator:
         self.temperature = temperature
 
         self.system_prompt = """
-        Sparafrazuj podany tekst w mowie potocznej podmieniając przekleństwa na bardziej kulturalne słowa. Nie dodawaj na koniec komentarza od siebie teskt umieść w polu "user", a niezmieniony tekst w polu "assistant".
+        Sparafrazuj podany tekst w mowie potocznej podmieniając przekleństwa na bardziej kulturalne słowa. Nie dodawaj na koniec komentarza od siebie. Zwróć wynik w postacji json. Teskt umieść w polu "user", a niezmieniony tekst w polu "assistant".
 
         EXAMPLE USER INPUT:
         Nazywam się Cezary Baryka, od dwudziestu minut jestem właścicielem tego oto szklanego domu. Powoli zaczynam żałować zakupu. W nocy pizga, w dzień parówa. Zero wentylacji i brak kanalizacji robią swoje.
@@ -27,14 +27,23 @@ class DeepSeekInputCreator:
         """
 
     def create_descriptions(self, chunks: list[str]) -> list[dict[str, str]]:
-        with ThreadPoolExecutor() as executor:
-            futures = [executor.submit(self._create_description, chunk) for chunk in chunks]
+        chunks = chunks[74:]
+        try:
+            with ThreadPoolExecutor() as executor:
+                futures = [executor.submit(self._create_description, chunk) for chunk in chunks]
 
-            descriptions = []
-            with tqdm(total=len(chunks), desc="Generating Descriptions", unit="chunk") as pbar:
-                for future in as_completed(futures):
-                    descriptions.append(future.result())
-                    pbar.update(1)
+                descriptions = []
+                with tqdm(total=len(chunks), desc="Generating Descriptions", unit="chunk") as pbar:
+                    for future in as_completed(futures):
+                        descriptions.append(future.result(timeout=10))
+                        pbar.update(1)
+
+        except Exception as e:
+            with open('train_datasets/error.jsonl', 'a', encoding='utf-8') as file:
+                for description in descriptions:
+                    json.dump(description, file, ensure_ascii=False)
+                    file.write('\n')
+            raise
 
         return descriptions
 
