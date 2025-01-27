@@ -34,11 +34,16 @@ class ChunkingTranscription:
                     })
                     combined_chunks = ''
             print(chunks)
-            with jsonlines.open('chunked_2.jsonl', mode='w') as writer:
+            if combined_chunks.strip():
+                chunks.append({
+                    "epizod": t_obj['title'],
+                    "chunks": combined_chunks.strip()
+                })
+            with jsonlines.open('chunked_3.jsonl', mode='w') as writer:
                 for processed in chunks:
                     writer.write(processed)
 
 
 if __name__ == '__main__':
-    s = ChunkingTranscription(DatasetConfig.CAPTIONS)
+    s = ChunkingTranscription('dataset2.jsonl')
     s.chunking()

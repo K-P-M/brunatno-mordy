@@ -16,15 +16,16 @@ class NoNoWords:
             for obj in reader:
                 words = self.__find_no_no_words(obj['transcription'])
                 self.unique_words.update(word.lower() for word in words)
-        output_data=[
-            {'word':word.lower(),'replace':''}
+        output_data = [
+            {'word': word.lower(), 'replace': ''}
             for word in self.unique_words
         ]
 
         with open(output_file, "w", encoding="utf-8") as f:
             json.dump(output_data, f, ensure_ascii=False, indent=4)
 
-if __name__ == '__main__':
-    not_nWord=NoNoWords('../data/transcriptions.jsonl')
 
-    not_nWord.create_set_of_bad_words('words.json')
+
+if __name__ == '__main__':
+    not_nWord = NoNoWords('../data/transcriptions.jsonl')
+

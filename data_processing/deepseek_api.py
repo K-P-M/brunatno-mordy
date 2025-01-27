@@ -27,7 +27,7 @@ class DeepSeekInputCreator:
         """
 
     def create_descriptions(self, chunks: list[str]) -> list[dict[str, str]]:
-        chunks = chunks[74:]
+        chunks = chunks[:-1]
         try:
             with ThreadPoolExecutor() as executor:
                 futures = [executor.submit(self._create_description, chunk) for chunk in chunks]
