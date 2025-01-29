@@ -8,26 +8,25 @@ class DeepSeekInputCreator:
     def __init__(self, api_key: str, temperature: float = 1.3):
         self.client = OpenAI(
             api_key=api_key,
-            base_url="https://api.deepseek.com",
+            # base_url="https://api.deepseek.com",
         )
 
         self.temperature = temperature
 
         self.system_prompt = """
-        Sparafrazuj podany tekst w mowie potocznej podmieniając przekleństwa na bardziej kulturalne słowa. Nie dodawaj na koniec komentarza od siebie. Zwróć wynik w postacji json. Teskt umieść w polu "user", a niezmieniony tekst w polu "assistant".
+        Stwórz opisy dla podanego tekstu. Opis umieść w polu "user", a niezmieniony tekst w polu "assistant". Nie dodawaj na koniec komentarza od siebie.  Zwróć wynik w postaci json.
 
         EXAMPLE USER INPUT:
         Nazywam się Cezary Baryka, od dwudziestu minut jestem właścicielem tego oto szklanego domu. Powoli zaczynam żałować zakupu. W nocy pizga, w dzień parówa. Zero wentylacji i brak kanalizacji robią swoje.
         
         EXAMPLE JSON OUTPUT:
         {
-            "user": Jestem Cezary Baryka, od jakichś 20 minut mam ten szklany dom. I już trochę żałuję, że go kupiłem. W nocy nieubłagalnie zimno, a w dzień upał nie do wytrzymania. Zero przewiewu i brak kanalizacji",
+            "user": "Opowiedz jak jak to jest mieszkać w szklanym domu",
             "assistant": "Nazywam się Cezary Baryka, od dwudziestu minut jestem właścicielem tego oto szklanego domu. Powoli zaczynam żałować zakupu. W nocy pizga, w dzień parówa. Zero wentylacji i brak kanalizacji robią swoje."
         }
         """
 
     def create_descriptions(self, chunks: list[str]) -> list[dict[str, str]]:
-        chunks = chunks[:-1]
         try:
             with ThreadPoolExecutor() as executor:
                 futures = [executor.submit(self._create_description, chunk) for chunk in chunks]
@@ -54,7 +53,7 @@ class DeepSeekInputCreator:
         ]
 
         response = self.client.chat.completions.create(
-            model="deepseek-chat",
+            model="gpt-4o-mini",
             messages=messages,
             response_format={
                 'type': 'json_object'
